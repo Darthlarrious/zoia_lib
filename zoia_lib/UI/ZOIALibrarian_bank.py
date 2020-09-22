@@ -3,7 +3,6 @@ import os
 import platform
 
 from PySide2.QtCore import QEvent
-from PySide2.QtGui import QIcon
 from PySide2.QtWidgets import QTableWidgetItem, QPushButton, QFileDialog, \
     QMessageBox, QInputDialog, QTableWidgetSelectionRange, QMainWindow
 
@@ -44,13 +43,13 @@ class ZOIALibrarianBank(QMainWindow):
         """
 
         # Prepare the button.
-        add = QPushButton("Click me to\n add to bank!", self)
+        add = QPushButton("Add to Bank", self)
         add.setObjectName(idx)
         add.setFont(self.ui.table_bank_local.horizontalHeader().font())
         add.clicked.connect(self.click_to_add)
         # if idx in self.data_bank:
         #     add.setEnabled(False)
-        #     add.setText("Already in bank!")
+        #     add.setText("Already in bank")
         self.ui.table_bank_local.setCellWidget(i, 3, add)
 
     def _set_data_bank(self):
@@ -275,7 +274,7 @@ class ZOIALibrarianBank(QMainWindow):
         if sd.get_sd_root() is None:
             self.msg.setWindowTitle("No SD Path")
             self.msg.setIcon(QMessageBox.Information)
-            self.msg.setText("Please specify your SD card path!")
+            self.msg.setText("Please specify your SD card path")
             self.msg.setStandardButtons(QMessageBox.Ok)
             self.msg.exec_()
             self.sd.sd_path(False, self.ui.table_sd_left.width() * 2)
@@ -314,7 +313,7 @@ class ZOIALibrarianBank(QMainWindow):
             self.msg.setInformativeText("")
             if len(fails) == 0:
                 # No failed exports, let the user know.
-                self.msg.setWindowTitle("Success!")
+                self.msg.setWindowTitle("Success")
                 self.msg.setIcon(QMessageBox.Information)
                 self.msg.setText("The Bank has been successfully exported "
                                  "to the root of your SD card.")

@@ -84,10 +84,10 @@ class ZOIALibrarianLocal(QMainWindow):
 
         # Only enable exporting if there is a single version on the main page.
         if "[Multiple Versions]" in btn.text():
-            ext_btn = QPushButton("See Version\nHistory to\nexport!", self)
+            ext_btn = QPushButton("See Version\nHistory to\nexport", self)
             ext_btn.setEnabled(False)
         else:
-            ext_btn = QPushButton("Click me\nto export!", self)
+            ext_btn = QPushButton("Export \npatch", self)
 
         del_btn = QPushButton("X", self)
 
@@ -193,7 +193,7 @@ class ZOIALibrarianLocal(QMainWindow):
             # No SD path.
             self.msg.setWindowTitle("No SD Path")
             self.msg.setIcon(QMessageBox.Information)
-            self.msg.setText("Please specify your SD card path!")
+            self.msg.setText("Please specify your SD card path")
             self.msg.setStandardButtons(QMessageBox.Ok)
             self.msg.exec_()
             self.sd.sd_path(False, self.window.width())
@@ -234,7 +234,7 @@ class ZOIALibrarianLocal(QMainWindow):
                                 os.path.join(self.sd.get_sd_root(),
                                              "to_zoia"), slot, True)
                             self.ui.statusbar.showMessage(
-                                "Export complete!", timeout=5000)
+                                "Export complete", timeout=5000)
                             break
                 # Operation was aborted.
                 break
@@ -303,7 +303,7 @@ class ZOIALibrarianLocal(QMainWindow):
             self.msg.setWindowTitle("No Updates")
             self.msg.setIcon(QMessageBox.Information)
             self.msg.setText("All of the patches you have downloaded are "
-                             "the latest version!")
+                             "the latest version")
             self.msg.setStandardButtons(QMessageBox.Ok)
             self.msg.exec_()
         else:

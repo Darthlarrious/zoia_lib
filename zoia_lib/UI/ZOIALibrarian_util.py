@@ -193,6 +193,7 @@ class ZOIALibrarianUtil:
             "col_1": self.ui.table_PS.columnWidth(1),
             "col_2": self.ui.table_PS.columnWidth(2),
             "col_3": self.ui.table_PS.columnWidth(3),
+            "col_4": self.ui.table_PS.columnWidth(4),
             "split_left": self.ui.splitter_PS.sizes()[0],
             "split_right": self.ui.splitter_PS.sizes()[1]
         }
@@ -202,7 +203,7 @@ class ZOIALibrarianUtil:
             "col_2": self.ui.table_local.columnWidth(2),
             "col_3": self.ui.table_local.columnWidth(3),
             "col_4": self.ui.table_local.columnWidth(4),
-            # "col_5": self.ui.table_local.columnWidth(5),
+            "col_5": self.ui.table_local.columnWidth(5),
             "split_left": self.ui.splitter_local.sizes()[0],
             "split_right": self.ui.splitter_local.sizes()[1],
             "split_top": self.ui.splitter_local_hori.sizes()[0],
@@ -211,19 +212,24 @@ class ZOIALibrarianUtil:
         sd_sizes = {
             "col_0": self.ui.table_sd_left.columnWidth(0),
             "col_1": self.ui.table_sd_left.columnWidth(1),
-            "col_2": self.ui.table_sd_right.columnWidth(0),
-            "col_3": self.ui.table_sd_right.columnWidth(1),
-            "split_top": self.ui.splitter_sd_vert.sizes()[0],
-            "split_bottom": self.ui.splitter_sd_vert.sizes()[1],
-            "split_left": self.ui.splitter_sd_hori.sizes()[0],
-            "split_right": self.ui.splitter_sd_hori.sizes()[1]
+            "col_2": self.ui.table_sd_left.columnWidth(2),
+            "col_3": self.ui.table_sd_right.columnWidth(0),
+            "col_4": self.ui.table_sd_right.columnWidth(1),
+            "col_5": self.ui.table_sd_right.columnWidth(2),
+            "split_top": self.ui.splitter_sd_hori.sizes()[0],
+            "split_bottom": self.ui.splitter_sd_hori.sizes()[1],
+            "split_left": self.ui.splitter_sd_vert.sizes()[0],
+            "split_right": self.ui.splitter_sd_vert.sizes()[1]
         }
         bank_sizes = {
             "col_0": self.ui.table_bank_left.columnWidth(0),
-            "col_1": self.ui.table_bank_right.columnWidth(0),
-            "col_2": self.ui.table_bank_local.columnWidth(0),
-            "col_3": self.ui.table_bank_local.columnWidth(1),
-            "col_4": self.ui.table_bank_local.columnWidth(2),
+            "col_1": self.ui.table_bank_left.columnWidth(1),
+            "col_2": self.ui.table_bank_right.columnWidth(0),
+            "col_3": self.ui.table_bank_right.columnWidth(1),
+            "col_4": self.ui.table_bank_local.columnWidth(0),
+            "col_5": self.ui.table_bank_local.columnWidth(1),
+            "col_6": self.ui.table_bank_local.columnWidth(2),
+            "col_7": self.ui.table_bank_local.columnWidth(3),
             "split_left": self.ui.splitter_bank.sizes()[0],
             "split_middle": self.ui.splitter_bank.sizes()[1],
             "split_right": self.ui.splitter_bank.sizes()[2],

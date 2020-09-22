@@ -291,7 +291,7 @@ class Ui_MainWindow(object):
         self.table_PS.horizontalHeader().setCascadingSectionResizes(True)
         self.table_PS.horizontalHeader().setMinimumSectionSize(0)
         self.table_PS.horizontalHeader().setDefaultSectionSize(0)
-        self.table_PS.horizontalHeader().setStretchLastSection(True)
+        self.table_PS.horizontalHeader().setStretchLastSection(False)
         self.table_PS.verticalHeader().setVisible(False)
 
         self.verticalLayout_8.addWidget(self.table_PS)
@@ -2246,7 +2246,7 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem151 = self.table_bank_local.horizontalHeaderItem(2)
         ___qtablewidgetitem151.setText(QCoreApplication.translate("MainWindow", u"Categories", None));
         ___qtablewidgetitem152 = self.table_bank_local.horizontalHeaderItem(3)
-        ___qtablewidgetitem152.setText(QCoreApplication.translate("MainWindow", u"Add to Bank", None));
+        ___qtablewidgetitem152.setText(QCoreApplication.translate("MainWindow", u"Move", None));
 
         __sortingEnabled = self.table_bank_local.isSortingEnabled()
         self.table_bank_local.setSortingEnabled(False)
